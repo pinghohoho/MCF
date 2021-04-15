@@ -519,12 +519,12 @@
                                                         alert("最多" + countMax + "個欄位");
                                                     else
                                                         count+=1
-                                                        document.getElementById("fieldSpace1").innerHTML += 
-                                                        '<tr>\
-                                                        <td><input type="number" style="width:100%;height:100%" name="' + commonName1 + count + '"></td>\
-                                                        <td><input type="number" style="width:100%;height:100%" name="' + commonName2 + count + '"></td>\
-                                                        </tr>';
-                                                                                                                                                                                                                                                                               
+                                                        $('#fieldSpace1 > tbody:last-child').append(`
+                                                            <tr>
+                                                                <td><input type="number" style="width:100%;height:100%" name="' + commonName1 + count + '"></td>
+                                                                <td><input type="number" style="width:100%;height:100%" name="' + commonName2 + count + '"></td>
+                                                            </tr>
+                                                        `);                                                                                                                                                                                                                    
                                                 }
                                                 function delField1() {
                                                     if (count > countMin) {
